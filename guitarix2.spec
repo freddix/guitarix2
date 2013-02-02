@@ -2,12 +2,12 @@
 
 Summary:	Simple Linux Rock Guitar Amplifier for JACK
 Name:		guitarix2
-Version:	0.25.1
+Version:	0.25.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/guitarix/%{name}-%{version}%{pre}.tar.bz2
-# Source0-md5:	686d1ae764e012e56dbcc2c8eaf7e592
+# Source0-md5:	6471c01705c724d80fac0d31168979db
 BuildRequires:	boost-devel
 BuildRequires:	gtkmm-devel
 BuildRequires:	jack-audio-connection-kit-devel
@@ -88,14 +88,34 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n lv2-guitarix
 %defattr(644,root,root,755)
+
 %dir %{_libdir}/lv2/gxamp.lv2
 %attr(755,root,root) %{_libdir}/lv2/gxamp.lv2/gxamp.so
-%attr(755,root,root) %{_libdir}/lv2/gxamp.lv2/gxamp.ttl
 %attr(755,root,root) %{_libdir}/lv2/gxamp.lv2/gxamp_gui.so
-%attr(755,root,root) %{_libdir}/lv2/gxamp.lv2/manifest.ttl
+%{_libdir}/lv2/gxamp.lv2/gxamp.ttl
+%{_libdir}/lv2/gxamp.lv2/manifest.ttl
+
 %dir %{_libdir}/lv2/gxamp_stereo.lv2
 %attr(755,root,root) %{_libdir}/lv2/gxamp_stereo.lv2/gxamp_gui_stereo.so
 %attr(755,root,root) %{_libdir}/lv2/gxamp_stereo.lv2/gxamp_stereo.so
-%attr(755,root,root) %{_libdir}/lv2/gxamp_stereo.lv2/gxamp_stereo.ttl
-%attr(755,root,root) %{_libdir}/lv2/gxamp_stereo.lv2/manifest.ttl
+%{_libdir}/lv2/gxamp_stereo.lv2/gxamp_stereo.ttl
+%{_libdir}/lv2/gxamp_stereo.lv2/manifest.ttl
+
+%dir %{_libdir}/lv2/gxautowah.lv2
+%attr(755,root,root) %{_libdir}/lv2/gxautowah.lv2/gxautowah.so
+%attr(755,root,root) %{_libdir}/lv2/gxautowah.lv2/gxautowah_gui.so
+%{_libdir}/lv2/gxautowah.lv2/gxautowah.ttl
+%{_libdir}/lv2/gxautowah.lv2/manifest.ttl
+
+%dir %{_libdir}/lv2/gxbooster.lv2
+%attr(755,root,root) %{_libdir}/lv2/gxbooster.lv2/gxbooster.so
+%attr(755,root,root) %{_libdir}/lv2/gxbooster.lv2/gxbooster_gui.so
+%{_libdir}/lv2/gxbooster.lv2/gxbooster.ttl
+%{_libdir}/lv2/gxbooster.lv2/manifest.ttl
+
+%dir %{_libdir}/lv2/gxts9.lv2
+%attr(755,root,root) %{_libdir}/lv2/gxts9.lv2/gxts9.so
+%attr(755,root,root) %{_libdir}/lv2/gxts9.lv2/gxts9_gui.so
+%{_libdir}/lv2/gxts9.lv2/gxts9.ttl
+%{_libdir}/lv2/gxts9.lv2/manifest.ttl
 
